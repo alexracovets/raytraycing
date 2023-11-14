@@ -3,11 +3,12 @@ import glsl from "vite-plugin-glsl";
 import wasm from "vite-plugin-wasm";
 
 export default defineConfig({
-  publicDir: "static",
-  server: {
-    port: 8080,
-    host: true,
+  base: './',
+  build: {
+    target: 'es2015',
+    outDir: 'dist',
   },
+  publicDir: "static",
   plugins: [
     glsl(),
     wasm(),
