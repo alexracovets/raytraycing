@@ -5,7 +5,7 @@ import wasm from "vite-plugin-wasm";
 export default defineConfig({
   base: './',
   build: {
-    target: 'es2015',
+    target: 'esnext',
     outDir: 'dist',
   },
   publicDir: "static",

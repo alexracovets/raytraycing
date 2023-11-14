@@ -78,7 +78,7 @@ TraceResult raytrace(Ray ray) {
     }
     float refractionPower = 1. - reflectionPower;
     ray.power *= 0.96;
-    float decay = exp(0.05 * -distance(hit, outHit));
+    float decay = exp(-0.05 * -distance(hit, outHit));
 
     Ray one = Ray(hit, reflection, reflectionPower * ray.power);
     Ray two = Ray(outHit, outRefraction, refractionPower * ray.power * decay);
